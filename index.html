@@ -2,56 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port</title>
+    <meta name="description" content="was">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/154f7099c1.js" crossorigin="anonymous"></script>
-    <title>was07</title>
-    <style>
-        :root {
-            font-family: sans-serif;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        #message {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            max-width: 450px;
-        }
-        .i {
-            font-size: 5em;
-            margin-bottom: 15px;
-        }
-        .m1 {
-            font-size: 3em;
-            padding-bottom: 20px;
-        }
-        .m2 {
-            font-size: 1.5em;
-        }
-        a {
-            text-decoration: none;
-            color: #22a9b3;
-        }
-    </style>
 </head>
 <body>
-    <div id="message">
-        <i class="i fa-solid fa-circle-info"></i>
-        <br>
-        <div class="m1">
-            This site is currently under construction.
+        <div id="top">
+        <!--  -->
+    </div>
+    <div id="overview">
+        <div id="left">
+            <img id="pfp" src="images/gt s.jpg" alt="">
         </div>
-        <div class="m2">
-            Mind checking my <a href="https://github.com/was07">github user profile</a> for now?
+        <div id="main">
+            <span data-text="was" id="name">was</span>
+            <div class="fab-row fab-link-row">
+                <a target="_blank" href="https://github.com/was07" data-text="/was07" class="fab fab-link fa-github"></a>
+                <!-- <a href="#" data-text="Discord" class="fab fab-link fa-discord"></a> -->
+                <a target="_blank" href="https://stackoverflow.com/users/16718602/was" data-text="/was" class="fab fab-link fa-brands fa-stack-overflow"></a>
+                <a target="_blank" href="https://twitter.com/walidbinsiddik" data-text="@walidbinsiddik" class="fab fab-link fa-twitter"></a>
+            </div>
+            <div class="box-widget">
+                <!-- <i class="fa-solid fa-align-justify"></i> -->
+                <span>About Me</span>
+                <p>
+                    Hi there, I am Walid Bin Siddik (aka Was‘).</p><p>
+                    I am a tech enthusiast and self-taught programmer from Bangladesh.
+                </p>
+            </div>
+            <div class="title-widget">my stack</div>
+            <div class="fab-row">
+                <i data-text="Python" class="fab fa-brands fa-python"></i>
+                <i data-text="JavaScript" class="fab fa-brands fa-js"></i>
+                <i data-text="HTML5" class="fab fa-brands fa-html5"></i>
+                <i data-text="CSS3" class="fab fa-brands fa-css3-alt"></i>
+                <i data-text="C++", class="fab-img fab"><img src="images/cpp.png"></i>
+            </div>
+            <div class="title-widget">my projects</div>
+            <div class="box-widget">
+                <span>Coming soon... maybe</span>
+                
+            </div>
+            <div class="footer">
+                <span>
+                    <p style="font-size: 1.1em;"><i class="fa-solid fa-copyright"></i> no copyright</p>
+                    <p>
+                    You can copy/paste the whole thing, source code is available on github: ...
+                    </p>
+                </span>
+            </div>
         </div>
     </div>
 </body>
 </html>
+<script  src="index.js"></script>
