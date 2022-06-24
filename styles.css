@@ -53,7 +53,7 @@ body {
     margin-top: 4em;
     margin: 2em 1em 0em 1em;
     animation-name: pfp-appear;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
 }
 @keyframes pfp-appear {
     from {transform: rotate(-180deg);}
@@ -73,7 +73,7 @@ body {
     text-shadow: #3b3b3b80 5px 10px 20px;
     color: #ffffff;
     animation-name: name-appear;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
 }
 @keyframes name-appear {
     from {transform: translateX(-30vh)}
