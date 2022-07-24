@@ -16,7 +16,7 @@ body {
 ::-webkit-scrollbar-thumb {background: #00131f; border: 1px solid #bbe6ff;}
 ::-webkit-scrollbar-track {background: #bbe6ff}
 
-#top {position: sticky;
+#top {position: fixed;
     background-color: #00131f;
     /* background-image: url(images/blue-white-light-polygonal-mosaic-background-vector-24035401.jpg); */
     height: 9px;
