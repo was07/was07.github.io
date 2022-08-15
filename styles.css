@@ -119,6 +119,8 @@ body {
     background-color: #1b1b1b;
     padding: .4em;
     border-radius: .4em;
+    transform: translateY(3.4em);
+    transition: 3s;
 }
 
 .fab-link:nth-of-type(1n) {
@@ -152,9 +154,8 @@ body {
 }
 
 .fab:hover::after {
-    transform: translateY(3.4em);
-    animation: fab-message-on-hover .3s ease-in-out;
     opacity: 1;
+    transition: .1s;
 }
 
 .fab > img {
@@ -253,8 +254,4 @@ a:hover {
         margin-right: 0;
         margin-bottom: 1em
     }
-}
-
-@keyframes fab-message-on-hover {
-    0% {opacity: 0;} 100% {opacity: 1;}    
 }
