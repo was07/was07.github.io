@@ -25,6 +25,7 @@ body {
     height: 9px;
     width: 100%;
     top: 0;
+    z-index: 1;
 }
 
 #overview {
@@ -228,7 +229,7 @@ a:hover {
     background-color: #c7e9ff;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     #overview {
         flex-direction: column;
         align-items: center;
@@ -253,5 +254,12 @@ a:hover {
     .fab {
         margin-right: 0;
         margin-bottom: 1em
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #pfp {
+        position: fixed;
+        top: 5vh;
     }
 }
