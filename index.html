@@ -18,11 +18,14 @@
         <!--  -->
     </div>
     <div id="overview">
+        <div id="left-container">
         <div id="left">
             <img id="pfp" src="images/gt s.jpg" alt="">
+            <span data-text="was" id="name">was</span>
+        </div>
         </div>
         <div id="main">
-            <span data-text="was" id="name">was</span>
+            
             <div class="fab-row fab-link-row">
                 <a target="_blank" rel="noopener" href="https://github.com/was07" data-text="/was07" class="fab fab-link fa-github"></a>
                 <!-- <a href="#" data-text="Discord" class="fab fab-link fa-discord"></a> -->
@@ -32,11 +35,21 @@
             </div>
             <div class="box-widget">
                 <!-- <i class="fa-solid fa-align-justify"></i> -->
-                <span>About Me</span>
+                <h2>About Me</h2>
                 <p>
                     Hi, I am Walid (aka Was‘), a self-taught programmer from Dhaka, Bangladesh.
-                    </p><p>
-                    Using mostly Python and JS, but always trying to learn new things.
+                </p>
+                <div class="mid" id="HiddenDiv" style="display: none;">
+                    <p>
+                        Using mostly Python and JS, but always trying to learn new things.
+                    </p>
+                    <h2>Also</h2>
+                    <p>
+                    I can solve the Rubix cube in <30s and play chess (online rating: 1100)
+                    </p>
+                </div>
+                <p>
+                    <a id="readMoreButton" onclick="javascript:ShowHide('HiddenDiv', 'readMoreButton')">show more</a>
                 </p>
             </div>
             <div class="title-widget">my skills</div>
@@ -47,16 +60,9 @@
                 <i data-text="CSS3" class="fab fa-brands fa-css3-alt"></i>
                 <i data-text="C++", class="fab-img fab"><img src="images/cpp.png" alt="C++"></i>
             </div>
-            <div class="box-widget">
-                <span>Also</span>
-                <p>
-                    I can solve the Rubix cube in <30s and play chess (online rating: 1100)
-                </p>
-            </div>
             <div class="title-widget">my projects</div>
-            <div class="box-widget">
-                <span>Coming soon... maybe</span>
-                
+            <div id="projects">
+                <!-- Added with JS -->
             </div>
             <div class="footer">
                 <span>

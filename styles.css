@@ -38,9 +38,16 @@ body {
     flex-direction: row;
 }
 
-#left {
+#left-container {
     width: 26vw;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#left {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,8 +57,8 @@ body {
 #pfp {
     width: 26vh;
     height: 26vh;
-    min-width: 190px;
-    min-height: 190px;
+    min-width: 150px;
+    min-height: 150px;
     border-radius: 50%;
     box-shadow: 2px 7px 10px 0 #0000006e, 0 10px 10px 0 #00000030;
     margin-top: 4em;
@@ -71,6 +78,8 @@ body {
 }
 
 #name {
+    padding: 10% 0%;
+    text-align: center;
     z-index: -1;
     font-family: 'Bebas Neue';
     font-size: 8em;
@@ -80,8 +89,8 @@ body {
     animation-duration: 1.5s;
 }
 @keyframes name-appear {
-    from {transform: translateX(-30vh)}
-    to {transform: translateX(0)}
+    from {transform: translateY(15vh)}
+    to {transform: translateY(0)}
 }
 
 .fab-row {
@@ -189,16 +198,29 @@ body {
 
 .box-widget:hover > i {color: #008fe7;}
 
-.box-widget > span {
+.box-widget > h2 {
+    padding: 0;
+    margin: 0;
     font-size: 1.4em;
     font-weight: 900;
 }
 
-.box-widget > p {
+.box-widget p {
     font-size: 1.4em;
     line-height: 1.4em;
     padding: 0;
     margin: .4em 0 0 0;
+}
+
+.box-widget p a {
+    color: #006bac;
+    text-decoration: none;
+    border-radius: .15em;
+}
+
+.box-widget p a:hover {
+    color: #008fe7;
+    background-color: #006aac33;
 }
 
 .title-widget {
@@ -219,17 +241,9 @@ body {
     text-align: center;
 }
 
-a {
-    color: #008fe7;
-    text-decoration: none;
-    border-radius: .2em;
-}
+a { text-decoration: none; }
 
-a:hover {
-    background-color: #c7e9ff;
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     #overview {
         flex-direction: column;
         align-items: center;
@@ -257,8 +271,8 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 768px) {
-    #pfp {
+@media screen and (min-width: 600px) {
+    #left {
         position: fixed;
         top: 5vh;
     }
