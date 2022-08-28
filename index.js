@@ -51,3 +51,5 @@ function add_project(data) {
 
 
 projects.forEach(load_project);
+console.log("%cLooks like you are inspecting my page 👀",
+            "font-size:50px; background:#000000; color:#009dff; padding:10px; border-radius:10px;")
