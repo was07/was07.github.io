@@ -221,6 +221,11 @@ body {
     background-color: #006aac33;
 }
 
+.box-widget .box-bottom-bar {
+    display: inline-flex;
+    gap: 1em;
+}
+
 .title-widget {
     color: #ffffff;
     margin-top: .8em;

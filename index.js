@@ -26,7 +26,7 @@ function get(url) {
 }
 
 const my_projects = document.getElementById('projects');
-const projects = ['was07/cyan']
+const projects = ['was07/cyan', 'was07/snake']
 
 
 
@@ -38,12 +38,20 @@ function load_project(repo) {
 function add_project(data) {
     console.log(data);
     let project = document.createElement('div');
+    let label = ''
+    if (data.stargazers_count > data.forks) {
+        label = `<i class="fa-regular fa-star"></i> ${data.stargazers_count}`
+    } else {
+        label = `<i class="fa-solid fa-code-fork"></i> ${data.forks}`
+    }
+
     project.className = 'box-widget';
     project.innerHTML = `
         <h2>${data.full_name}</h2>
         <p>${data.description}</p>
-        <p>
+        <p class='box-bottom-bar'>
             <a class="visit-repo-button" href="${data.html_url}" target="_blank"> visit repo </a>
+            <span>${label}<span>
         </p>
     `;
     my_projects.appendChild(project);
