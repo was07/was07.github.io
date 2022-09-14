@@ -129,8 +129,6 @@ body {
     background-color: #1b1b1b;
     padding: .4em;
     border-radius: .4em;
-    transform: translateY(3.4em);
-    transition: 3s;
 }
 
 .fab-link:nth-of-type(1n) {
@@ -165,7 +163,7 @@ body {
 
 .fab:hover::after {
     opacity: 1;
-    transition: .1s;
+    transform: translateY(3.4em);
 }
 
 .fab > img {
