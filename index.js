@@ -26,7 +26,7 @@ function get(url) {
 }
 
 const my_projects = document.getElementById('projects');
-const projects = ['was07/cyan', 'was07/snake']
+const projects = ['was07/cyan']
 
 
 

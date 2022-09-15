@@ -107,8 +107,8 @@ body {
     margin-right: 2em;
     background-color: #fafafa;
     color: #000000;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     padding: 10px;
     border-radius: 50%;
     box-shadow: #3b3b3b80 2.5px 5px 10px;
@@ -117,7 +117,7 @@ body {
 .fab-link {cursor: pointer; transition: 0.2s;}
 .fab-link:hover {transform: translateY(-2px); transition: .3s}
 
-.fab::before {font-size: 2rem;}
+.fab::before {font-size: 3em;}
 
 .fab::after {
     content: attr(data-text);
@@ -127,8 +127,8 @@ body {
     opacity: 0;
     color: #ffffff;
     background-color: #1b1b1b;
-    padding: .4em;
-    border-radius: .4em;
+    padding: .5em;
+    border-radius: .5em;
 }
 
 .fab-link:nth-of-type(1n) {
@@ -163,7 +163,7 @@ body {
 
 .fab:hover::after {
     opacity: 1;
-    transform: translateY(3.4em);
+    transform: translateY(4em);
 }
 
 .fab > img {
@@ -182,7 +182,6 @@ body {
 }
 
 .box-widget:hover {
-    border-color: #009dff;
     box-shadow: #3b3b3b80 2.5px 5px 10px, 0 10px 10px 0 #00000030;
     transform: scale(1.01);
     transition: .3s;
@@ -199,12 +198,12 @@ body {
 .box-widget > h2 {
     padding: 0;
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.8em;
     font-weight: 900;
 }
 
 .box-widget p {
-    font-size: 1.4em;
+    font-size: 1.7em;
     line-height: 1.4em;
     padding: 0;
     margin: .4em 0 0 0;
@@ -230,18 +229,37 @@ body {
     color: #ffffff;
     margin-top: .8em;
     text-align: left;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
 }
 
 .footer {
-    font-family: monospace;
-    background-color: #00131f;
+    background-color: #000000cc;
     color: #ffffff;
     border-radius: 10px 10px 0 0;
-    padding: .8em 4em;
+    padding: .8em .8em;
     margin-top: 2.5em;
     text-align: center;
+}
+
+.copyright-icon {
+    font-size: 1.2em;
+}
+
+.footer .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.footer .footer-links a {
+    color: #58a6ff;
+}
+
+.footer .footer-links a:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 a { text-decoration: none; }
