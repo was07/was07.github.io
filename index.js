@@ -1,63 +1,109 @@
-function ShowHide(divId, buttonId) {
-    var div = document.getElementById(divId);
-    var button = document.getElementById(buttonId);
-    if (div.style.display == 'none') {
-        div.style.display = 'block';
-        button.textContent = 'show less';
-    }
-    else {
-        div.style.display = 'none';
-        button.textContent = 'show more';
-    }
+console.log("Connected");
+var dark = true;
+
+function toggleTheme() {
+    dark = !dark
+    s = document.body.style
+    s.setProperty('--background-color', dark ? "#000" : "#fff")
+    s.setProperty('--text-color', dark ? "#FFF" : "#000")
+    s.setProperty('--hover-background-color', dark ? "#1e1e1e" : "#f1f1f1")
 }
 
-t = "ghp_sP4ONC" + "6Iu2YknSSBC" + "KVMLDJEqlYavT1QQZ23"
+function dropdownFunc() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches(".dropper")) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+                openDropdown.classList.remove("show");
+            }
+        }
+    }
+};
 
 function get(url) {
     return fetch(url, {
-        method: 'GET',
-        headers: new Headers(
-            {
-                'User-Agent': 'request',
-                'Authorization': t,
-            }
-        )
-    }).then(res => res.json());
+        method: "GET",
+        headers: new Headers({
+            "User-Agent": "request",
+            Authorization: "ghp_sP4ONC" + "6Iu2YknSSBC" + "KVMLDJEqlYavT1QQZ23",
+        }),
+    }).then((res) => res.json());
 }
 
-const my_projects = document.getElementById('projects');
-const projects = ['was07/cyan']
-
-
-
-function load_project(repo) {
-    get("https://api.github.com/repos/" + repo).then(add_project)
-}
-
-
-function add_project(data) {
-    console.log(data);
-    let project = document.createElement('div');
-    let label = ''
-    if (data.stargazers_count > data.forks) {
-        label = `<i class="fa-regular fa-star"></i> ${data.stargazers_count}`
-    } else {
-        label = `<i class="fa-solid fa-code-fork"></i> ${data.forks}`
+const projectsContainer = document.getElementById("pc");
+const usesContainer = document.getElementById("uc");
+const projects = [
+    {
+        title: "Cyan",
+        github: "was07/cyan",
     }
+];
+const uses = [
+    ["Windows OS", "Just an OS"],
+    [
+        "VSCode",
+        "Fevourite extensions: Error Lens, Lukin Theme, Todo Tree, Live Server, Material Icon Theme",
+    ],
+    ["Microsoft Edge", "To efficiently use my ram and increase productivity"],
+    ["Metarial Icons", "For VSCode, Github and more"],
+    ["PyCharm", "For python projects, but using it a lot less recently"],
+];
 
-    project.className = 'box-widget';
-    project.innerHTML = `
-        <h2>${data.full_name}</h2>
-        <p>${data.description}</p>
-        <p class='box-bottom-bar'>
-            <a class="visit-repo-button" href="${data.html_url}" target="_blank"> visit repo </a>
-            <span>${label}<span>
-        </p>
-    `;
-    my_projects.appendChild(project);
+function loadProject(project) {
+    get("https://api.github.com/repos/" + project.github).then((data) => {
+        addProject(project, data);
+    });
 }
 
+function addProject(project, data) {
+    div = document.createElement("div");
+    div.className = "project";
+    div.href = data.html_url;
+    div.innerHTML = `
+    <span class="title">
+        ${project.title}
+    </span>
+    <div class="description">
+        ${data.description}
+    </div>
+    <div class="bar">
+        <span class="bar-count">
+            <i class="fa-solid fa-star"></i><span>${data.stargazers_count}</span>
+        </span>
+        <span class="bar-count">
+            <i class="fa-sharp fa-solid fa-code-fork"></i></i><span>${data.forks_count}</span>
+        </span>
+        <span class="bar-visit-repo">
+            <a href="${data.html_url}">visit repo<a>
+        </span>
+    </div>
+    `;
+    projectsContainer.appendChild(div);
+}
 
-projects.forEach(load_project);
-console.log("%cLooks like you are inspecting my page 👀",
-            "font-size:50px; background:#000000; color:#009dff; padding:10px; border-radius:10px;")
+function addUse(lst) {
+    div = document.createElement("div");
+    div.className = "use";
+    div.innerHTML = `
+    <i class="fas fa-terminal"></i>
+    <div class="right">
+        <div class="title">
+            ${lst[0]}
+        </div>
+        <div class="text">
+            ${lst[1]}
+        </div>
+    </div>
+    `;
+    usesContainer.appendChild(div);
+}
+
+projects.forEach(loadProject);
+uses.forEach(addUse);
