@@ -38,7 +38,7 @@ a {text-decoration: none;}
     padding: 50px 0 20px 0;
 }
 
-.topbar > .icon > img {
+.topbar > .icon > a > img {
     height: 40px;
     border-radius: 20px;
 }
