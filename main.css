@@ -1,0 +1,118 @@
+/* global and topbar css */
+body {
+    --background-color: #000;
+    --text-color: #fff;
+    --hover-background-color: #1e1e1e;
+
+    --contrast-color: #42b4ff;
+    --contrast-color-light: #888888;
+
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    width: 80%;
+    margin: auto;
+    color: var(--text-color);
+}
+@media screen and (max-width: 600px) {
+    body {width: 90%}
+}
+
+::-webkit-scrollbar {background-color: var(--background-color);}
+::-webkit-scrollbar-thumb {background-color: #353535;}
+text
+
+* {padding: 0; margin: 0;}
+a {text-decoration: none;}
+
+.link {color: var(--contrast-color);}
+.link:hover {text-decoration: underline; text-decoration-color: var(--contrast-color);}
+
+.part {
+    width: 100%;
+}
+
+/* TOPBAR */
+
+#top {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 20px 0;
+}
+
+#top > .icon > a > img {
+    height: 40px;
+    border-radius: 20px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* .topbar-right > .theme > button {} */
+
+/* .topbar-right > .dropdown > button {} */
+
+.top-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #353535;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    transition: background-color .1s ease-out;
+}
+
+button.top-button:hover, button.top-button:active {
+    background-color: var(--contrast-color);
+    transition: background-color .1s ease-in;
+    cursor: pointer;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    position: absolute;
+    right: 0;
+    display: none;
+    background-color: #1e1e1e;
+    min-width: 160px;
+    margin-top: 10px;
+    z-index: 1;
+    --border-radius: 20px;
+    border-radius: var(--border-radius);
+}
+
+/* Links inside the dropdown */
+.dropdown-content > a {
+    background-color: transparent;
+    color: white;
+    padding: 14px 14px;
+    display: block;
+}
+.dropdown-content > :first-of-type {border-radius: var(--border-radius) var(--border-radius) 0 0;}
+.dropdown-content > :last-of-type {border-radius: 0 0 var(--border-radius) var(--border-radius);}
+.dropdown-content > a:hover {background-color: #353535;}
+
+.dropdown-content > a > i {  /* Icon */
+    margin: 0 14px 0 0;
+}
+
+.dropdown-content > div {
+    height: 1px;
+    border-bottom: 1px solid #5c5c5c;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
