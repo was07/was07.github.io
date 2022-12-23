@@ -21,16 +21,22 @@
     <script src="theme.js"></script>
     <script src="auto.js" defer></script>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="content.css">
     <title>This is Was</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 <body>
-    <div class="part">
+    <div class="all">
         <nav id="top" class="topbar">
-            <div class="icon">
-                <a href=""><img src="images/was-logo-100.png"></a>
-            </div>
+            <a href="" id="topbar-left">
+                <div class="icon">
+                    <img src="images/was-logo-100.png">
+                </div>
+                <div id="topbar-title">
+                    <div id="template-text-fact">Random fact: </div>
+                    <div id="topbar-fact"></div>
+                </div>
+            </a>
             <div class="topbar-right">
                 <div class="theme">
                     <button onclick="toggleTheme()" class="top-button theme-button">
@@ -49,7 +55,7 @@
                         <a href="#projects"><i class="fa-solid fa-folder"></i>Projects</a>
                         <a href="#uses"><i class="fa-solid fa-laptop"></i>Uses</a>
                     </div>
-                  </div>
+                </div>
             </div>
         </nav>
         <div class="overview">
@@ -83,7 +89,6 @@
                 <!-- 
                     Added with JS
                 -->
-                </div>
             </div>
         </div>
         <div id="uses">

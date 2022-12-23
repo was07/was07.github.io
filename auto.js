@@ -26,8 +26,20 @@ function get(url) {
     }).then((res) => res.json());
 }
 
+const topbarFactDiv = document.getElementById("topbar-fact")
 const projectsContainer = document.getElementById("pc");
 const usesContainer = document.getElementById("uc");
+const factOptions = [
+    "The logo is a less-than sign",
+    "The theme is based on #42b3ff",
+    "My real name is Walid",
+    "I'm from Asia",
+    "I'm from Dhaka, Bangladesh",
+    "My timezone is GMT+6",
+    "I use Visual Studio Code",
+    "My mostly use Python",
+    "I like to play chess"
+]
 const projects = [
     {
         title: "Cyan",
@@ -35,15 +47,21 @@ const projects = [
     }
 ];
 const uses = [
-    ["Windows OS", "Just an OS"],
+    ["Windows OS", "Just the Operating System I'm fimiliar with, they don't matter much"],
     [
         "VSCode",
-        "Fevourite extensions: Error Lens, Lukin Theme, Todo Tree, Live Server, Material Icon Theme",
+        "Fevourite extensions: Error Lens, Lukin Theme, Todo Tree and Live Server",
     ],
     ["Microsoft Edge", "To efficiently use my ram and increase productivity"],
     ["Metarial Icons", "For VSCode, Github and more"],
     ["PyCharm", "For python projects, but using it a lot less recently"],
 ];
+
+function setRandomFact() {
+    const randomFact = factOptions[Math.floor(Math.random() * factOptions.length)];
+    console.log(topbarFactDiv.innerHTML)
+    topbarFactDiv.innerHTML = randomFact
+}
 
 function loadProject(project) {
     get("https://api.github.com/repos/" + project.github).then((data) => {
@@ -94,5 +112,6 @@ function addUse(lst) {
     usesContainer.appendChild(div);
 }
 
+setRandomFact()
 projects.forEach(loadProject);
 uses.forEach(addUse);

@@ -112,7 +112,7 @@
 
 .projects-container > .project {
     padding: 20px;
-    border: 2px solid var(--contrast-color-light);
+    border: 2px solid var(--contrast-color);
     border-radius: 10px;
     transition-property: scale, border-color, background-color;
     transition-duration: 1s;
@@ -217,6 +217,7 @@
 .use > .right > .text {
     padding-top: 12px;
     color: var(--text-color);
+    opacity: .8;
 }
 
 /* FOOTER */
