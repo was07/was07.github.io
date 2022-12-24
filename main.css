@@ -1,4 +1,7 @@
 /* global and topbar css */
+html {
+    scroll-behavior: smooth;
+}
 body {
     --background-color: #000;
     --text-color: #fff;
