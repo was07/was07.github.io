@@ -44,6 +44,10 @@ const projects = [
     {
         title: "Cyan",
         github: "was07/cyan",
+    },
+    {
+        title: "Twitter Bitcoin Bot",
+        github: "was07/twitter-bitcoin-bot"
     }
 ];
 const uses = [
