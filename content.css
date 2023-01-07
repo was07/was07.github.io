@@ -7,24 +7,26 @@
     flex-wrap: wrap;
 }
 
-.overview-left {
-    padding: 20px 0;
-}
-
 .overview > .the-line {
     font-size: 5em;
     font-weight: bold;
     padding: 20px 0 20px 0;
 }
+.overview > .the-line > #was {
+    position: relative;
+    color: #66c4ff;
+    text-shadow: var(--contrast-color) 0 0 10px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px var(--contrast-color);
+}
 
 .overview > .about {
+    /* position: relative; */
     color: var(--text-color);
     opacity: .9;
     padding: 30px 30px 15px 0;
     font-size: 1.5em;
-}
-.overview > .about:hover {
-    opacity: 1;
+    line-height: 1.5;
 }
 
 .overview > .about > u {
@@ -45,14 +47,15 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     margin: 0 40px 40px 0;
-    font-size: 1.8em;
-    color: white;
-    background-color: #000;
+    font-size: 2em;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border: 1px solid var(--background-color-light);
+    box-shadow: var(--text-light) 0 0 10px 2px;
     border-radius: 50%;
-    box-shadow: 0px 0px 8px 1px var(--contrast-color);
     cursor: pointer;
     transition: box-shadow 1s ease-in-out, scale .6s ease-in-out, transform 1s ease-in-out;
     z-index: 0;
@@ -60,9 +63,9 @@
 .social-link:last-of-type {margin: 0 0px 40px 0;}
 
 .social-link:hover, .social-link:focus {
-    box-shadow: 0 0 14px 2px var(--contrast-color);
+    /* box-shadow: 0 0 14px 2px var(--contrast-color); */
     transition: box-shadow .1s ease-in-out, scale .1s ease-in-out, transform .1s ease-in-out;
-    transform: translateY(-3px);
+    transform: translateY(0px) scale(1.05);
 }
 
 .social-link::after {
@@ -72,8 +75,8 @@
     width: max-content;
     font-size: .55em;
     /* font-weight: bold; */
-    background-color: #00222b;
-    color: #f8f8f8;
+    background-color: var(--text-color);
+    color: var(--background-color);
     padding: 3px 8px;
     border-radius: 10px;
     transition: opacity 1s ease-out, transform 0s 1s;
@@ -81,7 +84,7 @@
 }
 
 .social-link:hover::after, .social-link:active::after {
-    transform: translateY(45px);
+    transform: translateY(55px);
     opacity: 1;
     transition: opacity .5s ease-out;
 }
@@ -99,9 +102,16 @@
 }
 
 .s-title {  /* Section Title */
+    position: relative;
     font-size: 3em;
     font-weight: bold;
     padding: 40px 0;
+}
+.s-title:hover::before {
+    position: absolute;
+    content: "#";
+    color: var(--background-color);
+    transform: translateX(-50px);
 }
 
 .projects > .projects-container {
@@ -112,7 +122,7 @@
 
 .projects-container > .project {
     padding: 20px;
-    border: 2px solid var(--contrast-color);
+    background-color: var(--background-color);
     border-radius: 10px;
     transition-property: scale, border-color, background-color;
     transition-duration: 1s;
@@ -121,16 +131,18 @@
 .project:hover {
     scale: 1.03;
     transition: .4s;
-    border-color: var(--contrast-color);
+    border-color: var(--hover-background-color);
     background-color: var(--hover-background-color);
 }
 
 .project > .title {
-    font-size: 2em;
+    font-size: 1.8em;
+    font-weight: bold;
 }
 
 .project > .description {
     font-size: 1.5em;
+    opacity: .8;
     padding: 20px 0 0 0;
     color: var(--text-color);
 }
@@ -159,14 +171,16 @@
     font-size: 1.1em;
 }
 
-.project > .bar > .bar-visit-repo > a {  /* visit repo link */
-    font-size: 1.2em;
+.project > .bar > .bar-visit-repo {  /* visit repo link */
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
     color: var(--contrast-color);
     padding: 0 6px;
     border-radius: 4px;
 }
 
-.project > .bar > span > a:hover {
+.project > .bar > .bar-visit-repo:hover {
     background-color: var(--contrast-color);
     color: white;
 }
@@ -190,9 +204,11 @@
     border-radius: 10px;
     transition-property: scale, border-color, background-color;
     transition-duration: 1s;
+    background-color: var(--background-color);
 }
 
 .use:hover, .use:focus {
+    border-color: var(--background-color-light);
     background-color: var(--hover-background-color);
     scale: 1.03;
     transition: .4s;
@@ -217,7 +233,7 @@
 .use > .right > .text {
     padding-top: 12px;
     color: var(--text-color);
-    opacity: .8;
+    opacity: .9;
 }
 
 /* FOOTER */

@@ -18,10 +18,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/154f7099c1.js" crossorigin="anonymous"></script>
-    <script src="theme.js"></script>
-    <script src="auto.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/auto.js" defer></script>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="anim.css">
     <title>This is Was</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
@@ -33,8 +34,7 @@
                     <img src="images/was-logo-100.png">
                 </div>
                 <div id="topbar-title">
-                    <div id="template-text-fact">Random fact: </div>
-                    <div id="topbar-fact"></div>
+                    WAS
                 </div>
             </a>
             <div class="topbar-right">
@@ -58,14 +58,16 @@
                 </div>
             </div>
         </nav>
+        <div id="anim-1"></div>
+        <div id="anim-2"></div>
         <div class="overview">
-                <span class="the-line">
-                    Hi, I am <span style="color: var(--contrast-color)">Was</span>
-                </span>
-                <div class="about">
-                    and welcome to my website. My real name is Walid and I'm a hobbyist programmer from Bangladesh. Not serious about taking programming as a proffesion but want to <u>have fun</u>, <u>meet new people and join communities</u> with it. I use Python and Javascript and make things which most of the time don't end up in a repository :/
+            <div class="the-line">
+                Hi, I am <span id="was">Was</span>
+            </div>
+            <div class="about">
+                and welcome to my website. My real name is Walid and I'm a hobbyist programmer from Bangladesh. I use Python and Javascript and want to <u>have fun</u>, <u>meet new people and join communities</u>.
                 </div>
-        </div>
+            </div>
         <div class="social-links-container">
             <a class="social-link github" target="_blank" href="https://github.com/was07" data-text="github">
                 <i class="fa-brands fa-github"></i>
@@ -101,7 +103,7 @@
         </div>
         <div class="footer">
             <div class="footer-text">
-                <span>This is Was'</span>
+                <span>This is Was</span>
             </div>
             <div class="footer-links">
                 PS. Have a issue/suggestion? Please visit the <a class="link" href="https://github.com/was07/was07.github.io">github repository</a>.

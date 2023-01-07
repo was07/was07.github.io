@@ -3,17 +3,20 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    --background-color: #000;
+    /* --background-color: #111;
+    --background-color-2: #000;
+    --background-color-light: #222;
+    --background-color-blend: #080808;
     --text-color: #fff;
-    --hover-background-color: #42b3ff43;
+    --hover-background-color: #42b3ff43; */
 
     --contrast-color: #42b4ff;
     --contrast-color-light: #888888;
 
-    background-color: var(--background-color);
+    background-color: var(--background-color-2);
     font-family: 'Roboto', sans-serif;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     color: var(--text-color);
 }
 @media screen and (max-width: 600px) {
@@ -25,7 +28,7 @@ body {
 text
 
 * {padding: 0; margin: 0;}
-a {text-decoration: none;}
+a {text-decoration: none; color: var(--text-color);}
 
 .link {color: var(--contrast-color);}
 .link:hover {text-decoration: underline; text-decoration-color: var(--contrast-color);}
@@ -47,16 +50,27 @@ a {text-decoration: none;}
     justify-content: space-between;
     background-color: var(--background-color);
     margin: 40px 0 20px 0;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 30px;
+    border: 1px solid var(--background-color-2);
     z-index: 100;
+    min-width: fit-content;
+}
+
+#top > * {
+    padding: 10px;
 }
 
 #topbar-left {
     display: flex;
     align-items: center;
     gap: 10px;
+    z-index: 100;
 }
+
+/* #topbar-left:hover { */
+/*      */
+/* } */
 
 #topbar-left > .icon > img { /* Logo image */
     height: 40px;
@@ -64,13 +78,9 @@ a {text-decoration: none;}
 }
 
 #topbar-left > #topbar-title {
-    color: var(--text-color);
-    font-size: 1em;
-    padding: 2px 5px;
-}
-
-#topbar-left > #topbar-title > #template-text-fact {
-    font-size: .8em;
+    color: var(--contrast-color);
+    font-size: 2em;
+    font-family: monospace;
 }
 
 .topbar-right {
@@ -114,30 +124,31 @@ button.top-button:hover, button.top-button:active {
     position: absolute;
     right: 0;
     display: none;
-    background-color: #1e1e1e;
+    background-color: var(--background-color-light);
     min-width: 160px;
     margin-top: 10px;
     z-index: 1;
     --border-radius: 20px;
     border-radius: var(--border-radius);
+    border-top-right-radius: 0;
 }
 
 /* Links inside the dropdown */
 .dropdown-content > a {
     background-color: transparent;
-    color: white;
+    color: var(--text-color);
     padding: 14px 14px;
     display: block;
 }
-.dropdown-content > :first-of-type {border-radius: var(--border-radius) var(--border-radius) 0 0;}
+.dropdown-content > :first-of-type {border-radius: var(--border-radius) 0 0 0;}
 .dropdown-content > :last-of-type {border-radius: 0 0 var(--border-radius) var(--border-radius);}
-.dropdown-content > a:hover {background-color: #353535;}
+.dropdown-content > a:hover {background-color: var(--hover-background-color);}
 
 .dropdown-content > a > i {  /* Icon */
     margin: 0 14px 0 0;
 }
 
-.dropdown-content > div {
+.dropdown-content > div {  /* divider */
     height: 1px;
     border-bottom: 1px solid #5c5c5c;
 }

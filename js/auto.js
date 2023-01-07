@@ -26,20 +26,8 @@ function get(url) {
     }).then((res) => res.json());
 }
 
-const topbarFactDiv = document.getElementById("topbar-fact")
 const projectsContainer = document.getElementById("pc");
 const usesContainer = document.getElementById("uc");
-const factOptions = [
-    "The logo is a less-than sign",
-    "The theme is based on #42b3ff",
-    "My real name is Walid",
-    "I'm from Asia",
-    "I'm from Dhaka, Bangladesh",
-    "My timezone is GMT+6",
-    "I use Visual Studio Code",
-    "My mostly use Python",
-    "I like to play chess"
-]
 const projects = [
     {
         title: "Cyan",
@@ -61,12 +49,6 @@ const uses = [
     ["PyCharm", "For python projects, but using it a lot less recently"],
 ];
 
-function setRandomFact() {
-    const randomFact = factOptions[Math.floor(Math.random() * factOptions.length)];
-    console.log(topbarFactDiv.innerHTML)
-    topbarFactDiv.innerHTML = randomFact
-}
-
 function loadProject(project) {
     get("https://api.github.com/repos/" + project.github).then((data) => {
         addProject(project, data);
@@ -74,9 +56,10 @@ function loadProject(project) {
 }
 
 function addProject(project, data) {
-    div = document.createElement("div");
+    div = document.createElement("a");
     div.className = "project";
     div.href = data.html_url;
+    div.target = "_blank"
     div.innerHTML = `
     <span class="title">
         ${project.title}
@@ -90,9 +73,6 @@ function addProject(project, data) {
         </span>
         <span class="bar-count">
             <i class="fa-sharp fa-solid fa-code-fork"></i></i><span>${data.forks_count}</span>
-        </span>
-        <span class="bar-visit-repo">
-            <a href="${data.html_url}">visit repo<a>
         </span>
     </div>
     `;
@@ -116,6 +96,5 @@ function addUse(lst) {
     usesContainer.appendChild(div);
 }
 
-setRandomFact()
 projects.forEach(loadProject);
 uses.forEach(addUse);

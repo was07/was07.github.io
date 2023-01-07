@@ -1,0 +1,49 @@
+#anim-1, #anim-2 {
+    position: fixed;
+    background: linear-gradient(135deg, rgba(0, 83, 116, 1) 0%, rgba(2, 86, 121, 1) 13.05%, rgba(9, 96, 136, 1) 28.68%, rgba(19, 112, 160, 1) 45.62%, rgba(34, 135, 193, 1) 63.38%, rgba(37, 140, 201, 1) 67%);
+    height: 250px;
+    width: 80px;
+    border-radius: 40px;
+    top: 0;
+    right: 200px;
+    padding: 0;
+}
+
+#anim-1 {
+    z-index: -20;
+    opacity: .1;
+    transform: rotate(45deg);
+    animation: anim-1 2s cubic-bezier(0, 0, 0.41, 0.97);
+}
+
+#anim-2 {
+    z-index: -21;
+    opacity: .1;
+    transform: rotate(-45deg) translateY(85px) translateX(-85px);
+    animation: anim-2 2s cubic-bezier(0, 0, 0.41, 0.97);
+}
+
+@keyframes anim-1 {
+    0% {
+        transform: rotate(10deg);
+        top: 100vh;
+        right: 100vh;
+    }
+    100% {
+        /* top: 0; */
+        /* right: 0; */
+        
+    }
+}
+
+@keyframes anim-2 {
+    0% {
+        transform: rotate(100deg);
+        top: -100vh;
+        right: 100vh;
+    }
+    100% {
+        /* top: 0; */
+        /* right: 0; */
+    }
+}
