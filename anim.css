@@ -1,3 +1,22 @@
+#mousethingy {
+    position: fixed;
+    height: 100px;
+    aspect-ratio: 1;
+    background: var(--contrast-color);
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    z-index: -130;
+    filter: blur(80px);
+    animation: mousethingy-animation 8s infinite;
+}
+
+@keyframes mousethingy-animation {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
 #anim-1, #anim-2 {
     position: fixed;
     background: linear-gradient(135deg, rgba(0, 83, 116, 1) 0%, rgba(2, 86, 121, 1) 13.05%, rgba(9, 96, 136, 1) 28.68%, rgba(19, 112, 160, 1) 45.62%, rgba(34, 135, 193, 1) 63.38%, rgba(37, 140, 201, 1) 67%);
@@ -5,7 +24,7 @@
     width: 80px;
     border-radius: 40px;
     top: 0;
-    right: 200px;
+    right: 220px;
     padding: 0;
 }
 

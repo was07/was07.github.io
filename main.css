@@ -15,16 +15,11 @@ body {
 
     background-color: var(--background-color-2);
     font-family: 'Roboto', sans-serif;
-    width: 80%;
-    margin: 0 auto;
     color: var(--text-color);
-}
-@media screen and (max-width: 600px) {
-    body {width: 90%}
 }
 
 ::-webkit-scrollbar {background-color: var(--background-color);}
-::-webkit-scrollbar-thumb {background-color: #353535;}
+::-webkit-scrollbar-thumb {background-color: var(--background-color-light);}
 text
 
 * {padding: 0; margin: 0;}
@@ -36,6 +31,11 @@ a {text-decoration: none; color: var(--text-color);}
 .all {
     width: calc(100%);
     overflow: visible;
+    width: 80%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+    .all {width: 90%}
 }
 
 /* TOPBAR */

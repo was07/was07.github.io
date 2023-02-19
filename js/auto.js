@@ -1,3 +1,15 @@
+// mouse thingy
+const thingy1 = document.getElementById('mousethingy')
+
+document.body.onpointermove = event => {
+    const {clientX, clientY} = event
+
+    thingy1.animate({
+        left: `${clientX}px`,
+        top: `${clientY}px`
+    }, { duration: 3000, fill: "forwards" })
+}
+
 function dropdownFunc() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
