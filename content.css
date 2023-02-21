@@ -94,12 +94,50 @@
 .spotify:hover {color: #1DB954;}
 .stack-overflow:hover {color: #f48024;}
 
+#message-form {}
+
+#message-textarea {
+    height: 150px;
+    width: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    border: 2px solid var(--background-color-light);
+    border-radius: 10px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 20px;
+    resize: vertical;
+    outline: none;
+    transition: .4s;
+}
+#message-textarea:focus-visible {
+    transition: .4s;
+    border: 2px solid var(--contrast-color);
+}
+
+#message-submit-button {
+    padding: 8px 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: var(--contrast-color);
+    color: var(--background-color);
+    font-weight: bold;
+    border: none;
+    transition: 1s;
+}
+#message-submit-button:hover {
+    cursor: pointer;
+    /* background-color: var(--hover-background-color); */
+    transition: .4s;
+}
+
 /* PROJECTS */
 
-.projects {
+#projects {
     display: flex;
     flex-direction: column;
-}
+}    
 
 .s-title {  /* Section Title */
     position: relative;
@@ -114,7 +152,7 @@
     transform: translateX(-50px);
 }
 
-.projects > .projects-container {
+#projects > .projects-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 30px;

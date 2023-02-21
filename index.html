@@ -54,6 +54,7 @@
                             <i class="fa-brands fa-twitter" style="color: #01b7ffc6;"></i>Say Hi!
                         </a>
                         <div></div>
+                        <a href="#message"><i class="fas fa-comment"></i></i>Message</a>
                         <a href="#projects"><i class="fa-solid fa-folder"></i>Projects</a>
                         <a href="#uses"><i class="fa-solid fa-laptop"></i>Uses</a>
                     </div>
@@ -87,7 +88,22 @@
                 <i class="fa-brands fa-spotify"></i>
             </a>
         </div>
-        <div class="projects">
+        <!-- TODO: Add anonymous message form -->
+        <div id="message">
+            <div class="s-title">
+                Message anonymously
+            </div>
+            <form id="message-form"
+              action="https://formspree.io/f/xqkopynz"
+              method="POST">
+              <label>
+                <textarea id="message-textarea" name="message" placeholder="Message Here"></textarea>
+              </label>
+              <!-- your other form fields go here -->
+              <button id="message-submit-button" type="submit">Send</button>
+            </form>
+        </div>
+        <div id="projects">
             <div id="projects" class="s-title">Projects</div>
             <div id="pc" class="projects-container">
                 <!-- 
