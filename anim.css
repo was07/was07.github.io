@@ -9,12 +9,6 @@
     border-radius: 50%;
     z-index: -130;
     filter: blur(120px);
-    animation: mousethingy-animation 8s infinite;
-}
-
-@keyframes mousethingy-animation {
-    0% {transform: rotate(0deg);}
-    100% {transform: rotate(360deg);}
 }
 
 /* TODO: Make the animation (infinite) run all time. And yes it has to look good. */
