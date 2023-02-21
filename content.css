@@ -110,7 +110,7 @@
 .s-title:hover::before {
     position: absolute;
     content: "#";
-    color: var(--background-color);
+    color: var(--background-color-light);
     transform: translateX(-50px);
 }
 
