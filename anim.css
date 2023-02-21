@@ -1,6 +1,6 @@
 #mousethingy {
     position: fixed;
-    height: 100px;
+    height: 150px;
     aspect-ratio: 1;
     background: var(--contrast-color);
     left: 50%;
@@ -8,7 +8,7 @@
     translate: -50% -50%;
     border-radius: 50%;
     z-index: -130;
-    filter: blur(80px);
+    filter: blur(120px);
     animation: mousethingy-animation 8s infinite;
 }
 
@@ -16,6 +16,8 @@
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
+
+/* TODO: Make the animation (infinite) run all time. And yes it has to look good. */
 
 #anim-1, #anim-2 {
     position: fixed;

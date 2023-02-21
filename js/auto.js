@@ -7,7 +7,7 @@ document.body.onpointermove = event => {
     thingy1.animate({
         left: `${clientX}px`,
         top: `${clientY}px`
-    }, { duration: 3000, fill: "forwards" })
+    }, { duration: 5000, fill: "forwards" })
 }
 
 function dropdownFunc() {
