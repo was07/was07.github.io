@@ -95,8 +95,6 @@
 .spotify:hover {color: #1DB954;}
 .stack-overflow:hover {color: #f48024;}
 
-#message-form {}
-
 #message-textarea {
     height: 150px;
     width: 100%;
@@ -129,7 +127,8 @@
 }
 #message-submit-button:hover {
     cursor: pointer;
-    /* background-color: var(--hover-background-color); */
+    color: var(--text-color);
+    background-color: var(--hover-background-color);
     transition: .4s;
 }
 

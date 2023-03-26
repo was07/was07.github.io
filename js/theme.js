@@ -1,7 +1,7 @@
 var dark = false;
 
 function toggleTheme() {
-    console.log('yeah')
+    console.log('Function toggleTheme() called')
     dark = !dark
     s = document.body.style
     s.setProperty('--background-color',       dark ? "#111" : "#eee")
