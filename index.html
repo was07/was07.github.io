@@ -91,16 +91,21 @@
         <!-- TODO: Add anonymous message form -->
         <div id="message">
             <div class="s-title">
-                Message anonymously
+                Leave a message
             </div>
             <form id="message-form"
               action="https://formspree.io/f/xqkopynz"
               method="POST">
               <label>
-                <textarea id="message-textarea" name="message" placeholder="Message Here"></textarea>
+                <textarea id="message-textarea" name="message" placeholder="Message Here" required="true"></textarea>
               </label>
-              <!-- your other form fields go here -->
-              <button id="message-submit-button" type="submit">Send</button>
+              <div id="identity-and-submit-button-div">
+                  <label>
+                    <input id="message-identity" name="identity" placeholder="Identity (optional)">
+                  </label>
+                  <!-- your other form fields go here -->
+                  <button id="message-submit-button" type="submit">Done</button>
+              </div>
             </form>
         </div>
         <div id="projects">

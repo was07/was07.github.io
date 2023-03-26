@@ -104,7 +104,8 @@
     border-radius: 10px;
     color: var(--text-color);
     background-color: var(--background-color);
-    font-size: 20px;
+    font-family: monospace;
+    font-size: 16px;
     resize: vertical;
     outline: none;
     transition: .4s;
@@ -114,14 +115,41 @@
     border: 2px solid var(--contrast-color);
 }
 
+#identity-and-submit-button-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+#message-identity {
+    max-width: 120%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 2px solid var(--background-color-light);
+    border-radius: 10px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-family: monospace;
+    font-size: 16px;
+    resize: vertical;
+    outline: none;
+    transition: .4s;
+}
+#message-identity:focus-visible {
+    transition: .4s;
+    border: 2px solid var(--contrast-color);
+}
+
 #message-submit-button {
-    padding: 8px 10px;
-    margin-top: 10px;
+    height: 100%;
+    padding: 10px 20px;
+    border: 2px solid var(--background-color-light);
     border-radius: 10px;
     font-size: 16px;
-    background-color: var(--contrast-color);
-    color: var(--background-color);
     font-weight: bold;
+    color: var(--text-light);
+    background-color: var(--background-color);
     border: none;
     transition: 1s;
 }
