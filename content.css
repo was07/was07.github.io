@@ -117,12 +117,19 @@
 }
 
 #identity-and-submit-button-div {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-between;
+    grid-template-areas: "identity gap submit-button";
+    grid-template-columns: 4fr 2fr 2fr;  /* half of horizontal space is identity text box. of rest,
+                                            half is gap then other half is submit button*/
+    gap: 0 10px;
     padding-top: 10px;
 }
 
+#message-identity-wrapper-label {
+    grid-area: identity;
+    display: grid;  /* to make identity box fill this wrapper */
+}
 #message-identity {
     max-width: 120%;
     padding: 10px 20px;
@@ -136,13 +143,14 @@
     resize: vertical;
     outline: none;
     transition: .4s;
-}
+}    
 #message-identity:focus-visible {
     transition: .4s;
     border: 2px solid var(--contrast-color);
-}
+}    
 
 #message-submit-button {
+    grid-area: submit-button;
     height: 100%;
     padding: 10px 20px;
     border: 2px solid var(--background-color-light);
